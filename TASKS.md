@@ -26,61 +26,47 @@
 
 ## Current Issue
 
-**GitHub Issue:** [#2 — Build responsive portfolio homepage](https://github.com/adi-tomar/ai101-personal-website/issues/2)
+**GitHub Issue:** [#3 — Add About and Experience sections](https://github.com/adi-tomar/ai101-personal-website/issues/3)
 
 **Status:** In Review
 
 **Priority:** High
 
-**Objective:** Create the initial website structure and homepage using the project requirements, brand guidelines, and approved profile information.
+**Objective:** Add a biography and career history to the existing classroom portfolio.
 
 ### Acceptance Criteria
 
-GitHub Issue #2 has an empty description. The local criteria below define the approved implementation plan.
+GitHub Issue #3 has an empty description. The criteria below follow the approved plan.
 
-- [x] Responsive navigation is implemented
-- [x] Homepage hero section is implemented
-- [x] Professional headline uses approved content
-- [ ] LinkedIn profile link is included (pending an approved public profile URL)
-- [x] Website follows `BRAND.md`
-- [x] Website works on desktop and mobile
-- [x] No private documents are served from the `docs/` site root
+- [x] The About section summarizes professional focus and experience supported by the classroom resume.
+- [x] Two clearly labeled fictional experience entries show the verified sample employers, roles, dates, and responsibilities.
+- [x] About and Experience navigation links work by keyboard and pointer within the existing responsive layout.
+- [x] The sections follow `BRAND.md` and reference files are outside the `docs/` site root.
 
 ### Implementation Checklist
 
-- [x] Review `README.md`, `ROADMAP.md`, `BRAND.md`, and `AGENTS.md`
-- [x] Review `references/PROFILE.md`
-- [x] Read the approved resume content, if available
-- [x] Retrieve the latest GitHub Issue requirements
-- [x] Propose an implementation plan
-- [x] Obtain implementation approval
-- [x] Create the website structure
-- [x] Implement homepage and navigation
-- [x] Implement responsive styling
-- [x] Test against acceptance criteria
-- [x] Review code changes and check for sensitive information
-- [x] Update `TASKS.md` with results
-- [x] Prepare proposed commit message
-- [ ] Obtain commit approval
-- [ ] Obtain push approval
-- [ ] Obtain pull-request approval
-- [ ] Obtain merge approval, if applicable
+- [x] Confirm the merged homepage and retrieve Issue #3.
+- [x] Review the project guidelines and approved classroom content.
+- [x] Present the plan and obtain implementation approval.
+- [x] Build the sections and update navigation and styles.
+- [x] Test the acceptance criteria, review the diff, and record results.
+- [ ] Obtain separate approval to stage and commit.
 
 ## Current Progress
 
 **Last Updated:** November 17, 2026
 
-**Work Completed:** Built a semantic homepage with responsive Home and Contact navigation, a keyboard skip link, and a clearly labeled fictional hero based on the classroom resume. The LinkedIn button links to the LinkedIn homepage.
+**Work Completed:** Added a short biography and two reverse-chronological experience cards. Linked both sections from the header.
 
-**Work Remaining:** Review the diff and supply an approved profile URL and real professional copy if this site will represent a real person. The View Projects button can be added when Issue #4 provides a projects destination.
+**Work Remaining:** User review and separate approval to stage and commit.
 
-**Blockers:** A public profile link cannot be verified until an approved URL is available. Reference files are already tracked outside `docs/`; any future deployment must serve only `docs/`.
+**Blockers:** None for Issue #3. A real professional biography and a public LinkedIn profile URL remain pending approved sources.
 
 **Files Changed:** `docs/index.html`, `docs/styles.css`, and `TASKS.md`.
 
-**Tests Performed:** Chrome at 320, 390, 768, and 1440px. Checked horizontal overflow, content width, Home and Contact links, keyboard focus and skip-link behavior, stylesheet loading, the LinkedIn destination, reference-file isolation, and console errors.
+**Tests Performed:** Chrome at 320, 390, 768, and 1440px. Checked section anchors, visible keyboard focus, skip-link behavior, role details against the sample resume, card layout, horizontal overflow, stylesheet loading, and console errors.
 
-**Test Results:** Local checks passed at all four widths. The LinkedIn homepage URL was confirmed in the markup. LinkedIn returned HTTP 403 to the direct HTTP check, so external navigation was not verified end to end. Both reference URLs returned HTTP 404 from the local site root.
+**Test Results:** All local checks passed. The cards stacked at 320 and 390px and sat side by side at 768 and 1440px. Both reference URLs returned HTTP 404. The existing LinkedIn destination was checked in the markup.
 
 ## Git and Approval Status
 
@@ -97,11 +83,9 @@ GitHub Issue #2 has an empty description. The local criteria below define the ap
 | Merge approval | Not requested |
 | Merge | Not performed |
 
-**Git Status:** Uncommitted on local branch `feature/issue-2-homepage`.
+**Git Status:** Uncommitted on local branch `feature/issue-3-about-experience`.
 
-**Proposed Commit Message:** `feat: add responsive portfolio homepage (#2)`
-
-**Pull Request:** None
+**Proposed Commit Message:** `feat: add about and experience sections (#3)`
 
 **Important:** Approval to implement an Issue does not grant approval to commit, push, open a pull request, or merge. Each action requires separate explicit approval.
 
@@ -109,17 +93,17 @@ GitHub Issue #2 has an empty description. The local criteria below define the ap
 
 ## Next Recommended Issue
 
-**GitHub Issue:** [#3 — Add About and Experience sections](https://github.com/adi-tomar/ai101-personal-website/issues/3)
+**GitHub Issue:** [#4 — Add Projects and Contact sections](https://github.com/adi-tomar/ai101-personal-website/issues/4)
 
 **Status:** Backlog
 
 **Priority:** High
 
-**Objective:** Build professional biography and experience sections using verified resume information.
+**Objective:** Add project cards and contact information using approved content.
 
-**Dependencies:** Issue #2
+**Dependencies:** Issue #3
 
-**Next Action:** Recommend after Issue #2 is reviewed and approved.
+**Next Action:** Recommend after Issue #3 is reviewed and approved.
 
 Do not begin automatically.
 
@@ -135,8 +119,8 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 
 | Issue | Title | Status | Priority | Dependency |
 |---|---|---|---|---|
-| #2 | Build responsive portfolio homepage | In Review | High | None |
-| #3 | Add About and Experience sections | Backlog | High | #2 |
+| #2 | Build responsive portfolio homepage | Closed on GitHub | High | None |
+| #3 | Add About and Experience sections | In Review | High | #2 |
 | #4 | Add Projects and Contact sections | Backlog | High | #3 |
 | #5 | Test responsive design and accessibility | Backlog | High | #2–#4 |
 
@@ -258,6 +242,7 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | `master` | Completed production website |
 | `starter` | Clean starting point for classroom exercises |
 | `feature/issue-2-homepage` | Development branch for Issue #2 |
+| `feature/issue-3-about-experience` | Development branch for Issue #3 |
 | `demo-integration` | Optional branch for demonstrating pull requests |
 
 **Branch Rules:**
@@ -272,7 +257,7 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 
 ## Completed Issues
 
-No completed Issues yet.
+Issue #2 was closed on GitHub and merged into `master` in [PR #7](https://github.com/adi-tomar/ai101-personal-website/pull/7). The homepage uses the LinkedIn homepage pending an approved public profile URL.
 
 For each completed Issue, record:
 
