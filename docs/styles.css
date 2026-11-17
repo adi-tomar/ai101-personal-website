@@ -1,0 +1,147 @@
+:root {
+  --blue: #2563eb;
+  --navy: #0f172a;
+  --text: #1f2937;
+  --muted: #64748b;
+  --paper: #fff;
+  --alternate: #f8fafc;
+  --border: #e2e8f0;
+  font-family: Inter, Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: var(--paper);
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  color: var(--blue);
+}
+
+a:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 4px;
+}
+
+.container {
+  width: min(1100px, calc(100% - 2 * clamp(1rem, 5vw, 3rem)));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: absolute;
+  top: 0.75rem;
+  left: 1rem;
+  padding: 0.5rem 0.75rem;
+  background: var(--paper);
+}
+
+.skip-link:not(:focus) {
+  clip-path: inset(50%);
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+}
+
+.header-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.25rem 1.5rem;
+  padding-block: 0.75rem;
+}
+
+.site-name,
+nav a {
+  display: inline-block;
+  padding-block: 0.5rem;
+  color: var(--navy);
+  text-decoration: none;
+}
+
+.site-name {
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.site-name:hover,
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  padding-block: clamp(3rem, 10vw, 8.5rem);
+}
+
+.sample-label {
+  margin: 0 0 1rem;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--navy);
+  line-height: 1.12;
+}
+
+h1 {
+  font-size: clamp(2.75rem, 8vw, 5.5rem);
+  letter-spacing: -0.04em;
+}
+
+.headline {
+  margin: 1rem 0;
+  color: var(--navy);
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+.intro {
+  max-width: 56ch;
+  margin: 0 0 1.75rem;
+  font-size: 1.125rem;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.65rem 1rem;
+  border-radius: 0.5rem;
+  background: var(--blue);
+  color: var(--paper);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.button:hover {
+  background: var(--navy);
+}
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  background: var(--alternate);
+}
+
+.footer-content {
+  padding-block: 2rem;
+}
+
+.footer-content p {
+  margin: 0.5rem 0 0;
+}
