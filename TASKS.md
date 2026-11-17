@@ -26,14 +26,12 @@
 
 ## Current Issues
 
-**Branch:** `feature/issues-11-14-content-design`
+**Branch:** `feature/issues-19-15-recruiter-portfolio`
 
 | GitHub issue | Status | Work completed | Remaining work |
 |---|---|---|---|
-| [#11 — Refine Professional Biography](https://github.com/adi-tomar/ai101-personal-website/issues/11) | Blocked | Edited the hero and About copy using the fictional classroom resume and kept the sample designation. | Provide an approved name, headline, and supporting professional information to replace the classroom biography. |
-| [#12 — Add Approved Profile Image](https://github.com/adi-tomar/ai101-personal-website/issues/12) | Blocked | Checked the repository and approved sources for a portrait. | Supply an image approved for public use and confirm who it depicts so its alternative text can be written. |
-| [#13 — Improve Project Cards](https://github.com/adi-tomar/ai101-personal-website/issues/13) | In Review | Refined the three source-backed descriptions, retained the concept labels, and linked the portfolio card to the public repository. | User review. |
-| [#14 — Improve Accessibility and Visual Design](https://github.com/adi-tomar/ai101-personal-website/issues/14) | In Review | Reviewed typography, contrast, spacing, and keyboard focus. Section links now move keyboard focus to the named destination. | Verify keyboard navigation in Safari and announcements with VoiceOver. |
+| [#19 — Redesign the portfolio for recruiters and professional networking](https://github.com/adi-tomar/ai101-personal-website/issues/19) | In Review | Added recruiter-oriented navigation and hero actions, moved experience and selected work ahead of About, reformatted career entries, and added draft title, description, and link-preview metadata. | Replace the fictional identity and copy with approved name, target roles, professional experience, selected work, and public LinkedIn URL. Verify the final share preview after publication. |
+| [#15 — Verify Content and Privacy](https://github.com/adi-tomar/ai101-personal-website/issues/15) | Blocked | Compared draft claims and concept labels to the classroom resume, verified the public project repository link, and audited the `docs/` publication directory. | Verify the final professional content and contact links against approved sources before public sharing. |
 
 ## Current Progress
 
@@ -41,27 +39,29 @@
 
 **Files Changed:** `docs/index.html`, `docs/styles.css`, and `TASKS.md`.
 
-**Tests Performed:** Chrome at 320, 390, 768, 1024, and 1440px, plus 320 and 640px at 200% root text size. Checked reflow, tab order, visible focus, fragment focus, section names, console output, and reference-file isolation. System WebKit layout checks at 320, 768, and 1440px.
+**Content Review:** The name, role descriptions, employers, dates, and sample projects match the fictional classroom resume. The site and preview metadata identify it as a draft. The generic LinkedIn links were removed, and the Contact section now points out that an approved public contact link is pending.
 
-**Test Results:** All Chrome checks passed and axe-core reported zero violations. System WebKit showed one, two, and three project columns without horizontal overflow. The public GitHub repository returned HTTP 200. Both reference URLs returned HTTP 404 from the local site root.
+**Privacy Review:** `docs/` contains only HTML and CSS. No reference files, contact addresses, placeholder profile URLs, or credentials were found there. All three reference file paths returned HTTP 404 from the local site. The existing sample references are tracked outside `docs/` in the public repository. Keep actual private source documents outside the public repository and use `docs/` as the publication directory.
 
-**Test Limitations:** Safari WebDriver requires Allow Remote Automation. System WebKit verified layout, while Chrome verified keyboard navigation and exposed roles and names. VoiceOver announcements remain untested.
+**Tests and Results:** Chrome passed section and fragment focus, navigation, keyboard tab order, visible focus, reflow, metadata, and console checks at 320, 390, 768, 1024, and 1440px, plus 320 and 640px at 200% root text size. Axe-core reported zero violations across those seven configurations. System WebKit showed one, two, and three project columns at 320, 768, and 1440px without horizontal overflow. The public project repository returned HTTP 200.
+
+**Test Limitations:** No live sharing preview or approved LinkedIn profile was available to verify.
 
 ## Git and Approval Status
 
-**Implementation Approval:** Granted for Issues #11–#14.
+**Implementation Approval:** Granted for Issues #19 and #15.
 
-**Git Status:** Unstaged and uncommitted on `feature/issues-11-14-content-design`. The previously recorded backlog numbers are included in the branch baseline.
+**Git Status:** Changes are unstaged and uncommitted on `feature/issues-19-15-recruiter-portfolio`. The Issue #19 backlog entry was carried onto this branch.
 
-**Proposed Commit Message:** `feat: refine portfolio content and accessibility (#11, #13, #14)`
+**Proposed Commit Message:** `feat: redesign recruiter portfolio draft (#19, #15)`
 
-**Approval Required:** Separate approval to stage and commit these three files. Push, pull request, and merge require their own approvals.
+**Approval Required:** Separate approval to stage and commit `docs/index.html`, `docs/styles.css`, and `TASKS.md`.
 
 ---
 
 ## Next Recommended Issue
 
-[**#15 — Verify Content and Privacy**](https://github.com/adi-tomar/ai101-personal-website/issues/15) follows review of the Sprint 2 work and resolution of the outstanding content and image decisions.
+[**#16 — Configure GitHub Pages**](https://github.com/adi-tomar/ai101-personal-website/issues/16) follows completion of the approved professional content and the final Issue #15 review.
 
 ---
 
@@ -88,12 +88,13 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | #12 | Add Approved Profile Image | Blocked | Medium | Sprint 1 |
 | #13 | Improve Project Cards | In Review | Medium | Sprint 1 |
 | #14 | Improve Accessibility and Visual Design | In Review | High | Sprint 1 |
+| #19 | Redesign the portfolio for recruiters and professional networking | In Review | High | #11, #13, #14 |
 
 ### Sprint 3 — Deployment
 
 | Issue | Title | Status | Priority | Dependency |
 |---|---|---|---|---|
-| #15 | Verify Content and Privacy | Backlog | High | Sprint 2 |
+| #15 | Verify Content and Privacy | Blocked | High | Sprint 2, including #19 |
 | #16 | Configure GitHub Pages | Backlog | High | Sprint 2 |
 | #17 | Deploy and Test Published Website | Backlog | High | GitHub Pages setup |
 
@@ -202,6 +203,7 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | `feature/issue-4-projects-contact` | Development branch for Issue #4 |
 | `feature/issue-5-responsive-accessibility` | Development branch for Issue #5 |
 | `feature/issues-11-14-content-design` | Development branch for Issues #11–#14 |
+| `feature/issues-19-15-recruiter-portfolio` | Development branch for Issues #19 and #15 |
 | `demo-integration` | Optional branch for demonstrating pull requests |
 
 **Branch Rules:**
