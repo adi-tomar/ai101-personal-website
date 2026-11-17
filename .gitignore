@@ -1,8 +1,8 @@
 # Private professional source documents
-references/resume.pdf
-references/resume.docx
-references/PROFILE.md
-references/private/
+#references/resume.pdf
+#references/resume.docx
+#references/PROFILE.md
+#references/private/
 
 # Secrets and environment files
 .env
