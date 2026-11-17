@@ -1,2 +1,18 @@
-*.pdf
+# Private professional source documents
+references/resume.pdf
+references/resume.docx
+references/PROFILE.md
+references/private/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# Local system files
 .DS_Store
+Thumbs.db
+
+# Temporary files
+*.log
+*.tmp
