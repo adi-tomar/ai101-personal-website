@@ -16,6 +16,7 @@
         <a href="#home">Home</a>
         <a href="#about">About</a>
         <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -27,7 +28,10 @@
       <h1 id="name">Alex Morgan</h1>
       <p class="headline">Product Manager focused on AI and digital innovation</p>
       <p class="intro">I plan digital products with engineering and design teams and look for ways to improve the customer experience. I’m interested in how AI can help turn ideas into practical products.</p>
-      <a class="button" href="https://www.linkedin.com/">Visit LinkedIn</a>
+      <div class="hero-actions">
+        <a class="button" href="#projects">View Projects</a>
+        <a class="button button-secondary" href="https://www.linkedin.com/">Visit LinkedIn</a>
+      </div>
     </section>
 
     <section class="profile-section" id="about" aria-labelledby="about-heading">
@@ -41,8 +45,8 @@
       <div class="container">
         <h2 id="experience-heading">Experience</h2>
         <p class="experience-note">The roles and employers below are fictional examples for AI 101 Academy.</p>
-        <div class="experience-grid">
-          <article class="experience-card">
+        <div class="card-grid">
+          <article class="card experience-card">
             <h3>Senior Product Manager</h3>
             <p class="role-details">Example Technologies Inc. · <time datetime="2022">2022</time>–Present</p>
             <ul>
@@ -50,7 +54,7 @@
               <li>Coordinate product launches and share plans with business and technical teams.</li>
             </ul>
           </article>
-          <article class="experience-card">
+          <article class="card experience-card">
             <h3>Product Manager</h3>
             <p class="role-details">Sample Digital Solutions · <time datetime="2018">2018</time>–<time datetime="2022">2022</time></p>
             <ul>
@@ -61,12 +65,36 @@
         </div>
       </div>
     </section>
+
+    <section class="profile-section" id="projects" aria-labelledby="projects-heading">
+      <div class="container">
+        <h2 id="projects-heading">Projects</h2>
+        <div class="card-grid projects-grid">
+          <article class="card project-card">
+            <h3>Personal Portfolio Website</h3>
+            <p class="project-type">AI 101 Academy learning project</p>
+            <p>This site demonstrates how Codex and GitHub can support an issue-based workflow for building a responsive portfolio.</p>
+          </article>
+          <article class="card project-card">
+            <h3>AI Productivity Assistant</h3>
+            <p class="project-type">Demonstration concept</p>
+            <p>An idea for an AI-powered tool that helps people organize tasks and projects.</p>
+          </article>
+          <article class="card project-card">
+            <h3>Customer Experience Dashboard</h3>
+            <p class="project-type">Demonstration concept</p>
+            <p>A dashboard concept for visualizing customer feedback and product performance in one place.</p>
+          </article>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="contact">
     <div class="container footer-content">
       <h2>Contact</h2>
-      <p>A public profile link will be added when one is approved.</p>
+      <p>Interested in digital products or practical uses of AI? LinkedIn is a place to connect with people working in those areas.</p>
+      <p><a href="https://www.linkedin.com/">Visit the LinkedIn homepage</a>. A public profile link is pending.</p>
     </div>
   </footer>
 </body>
