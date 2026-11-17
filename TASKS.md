@@ -16,95 +16,52 @@
 
 ## Current Sprint
 
-**Sprint:** Sprint 1 — Website Foundation
+**Sprint:** Sprint 2 — Content and Design
 
-**Sprint Goal:** Build a functional, responsive personal portfolio website using approved professional content.
+**Sprint Goal:** Refine portfolio content, project presentation, and accessibility using approved sources.
 
 **Overall Status:** In Review
 
 ---
 
-## Current Issue
+## Current Issues
 
-**GitHub Issue:** [#5 — Test responsive design and accessibility](https://github.com/adi-tomar/ai101-personal-website/issues/5)
+**Branch:** `feature/issues-11-14-content-design`
 
-**Status:** In Review
-
-**Priority:** High
-
-**Objective:** Verify responsive behavior and accessibility across the complete portfolio.
-
-### Acceptance Criteria
-
-GitHub Issue #5 has an empty description. These checks follow `ROADMAP.md` and `BRAND.md`.
-
-- [x] The homepage fits mobile, tablet, and desktop widths and supports enlarged text.
-- [x] The skip link and section navigation work by keyboard and links show visible focus.
-- [x] Automated checks cover contrast, heading structure, landmarks, and other applicable accessibility rules.
-- [x] The stylesheet loads without browser errors and reference files are outside the served site.
-
-### Implementation Checklist
-
-- [x] Confirm the merged baseline and retrieve Issue #5.
-- [x] Test responsive behavior, keyboard navigation, and automated accessibility rules.
-- [x] Fix the overflow found with enlarged text and rerun the checks.
-- [x] Review the diff, record results and limitations, and propose a commit message.
-- [ ] Obtain separate approval to stage and commit.
+| GitHub issue | Status | Work completed | Remaining work |
+|---|---|---|---|
+| [#11 — Refine Professional Biography](https://github.com/adi-tomar/ai101-personal-website/issues/11) | Blocked | Edited the hero and About copy using the fictional classroom resume and kept the sample designation. | Provide an approved name, headline, and supporting professional information to replace the classroom biography. |
+| [#12 — Add Approved Profile Image](https://github.com/adi-tomar/ai101-personal-website/issues/12) | Blocked | Checked the repository and approved sources for a portrait. | Supply an image approved for public use and confirm who it depicts so its alternative text can be written. |
+| [#13 — Improve Project Cards](https://github.com/adi-tomar/ai101-personal-website/issues/13) | In Review | Refined the three source-backed descriptions, retained the concept labels, and linked the portfolio card to the public repository. | User review. |
+| [#14 — Improve Accessibility and Visual Design](https://github.com/adi-tomar/ai101-personal-website/issues/14) | In Review | Reviewed typography, contrast, spacing, and keyboard focus. Section links now move keyboard focus to the named destination. | Verify keyboard navigation in Safari and announcements with VoiceOver. |
 
 ## Current Progress
 
 **Last Updated:** November 17, 2026
 
-**Work Completed:** Fixed horizontal overflow at 320px with text enlarged to 200% by allowing long text to wrap. Verified both card grids and the full navigation.
+**Files Changed:** `docs/index.html`, `docs/styles.css`, and `TASKS.md`.
 
-**Work Remaining:** User review and separate approval to stage and commit.
+**Tests Performed:** Chrome at 320, 390, 768, 1024, and 1440px, plus 320 and 640px at 200% root text size. Checked reflow, tab order, visible focus, fragment focus, section names, console output, and reference-file isolation. System WebKit layout checks at 320, 768, and 1440px.
 
-**Blockers:** None for the local tests. A direct request to the LinkedIn homepage returned HTTP 403, so only the link destination in the markup was verified. An approved public profile URL is still pending.
+**Test Results:** All Chrome checks passed and axe-core reported zero violations. System WebKit showed one, two, and three project columns without horizontal overflow. The public GitHub repository returned HTTP 200. Both reference URLs returned HTTP 404 from the local site root.
 
-**Files Changed:** `docs/styles.css` and `TASKS.md`.
-
-**Tests Performed:** Chrome at 320, 390, 768, 1024, and 1440px with default text size, plus 320 and 640px at 200% root text size. Checked overflow, keyboard tab order, focus, skip navigation, section anchors, browser errors, and reference-file isolation. Ran axe-core with WCAG 2.x A/AA and best-practice rules, plus the previous project and experience card regression checks.
-
-**Test Results:** All local checks passed after the overflow fix. Axe-core reported zero violations in all seven configurations. Both reference URLs returned HTTP 404 from `docs/`. Screen-reader behavior and browsers other than Chrome were not tested.
+**Test Limitations:** Safari WebDriver requires Allow Remote Automation. System WebKit verified layout, while Chrome verified keyboard navigation and exposed roles and names. VoiceOver announcements remain untested.
 
 ## Git and Approval Status
 
-| Action | Status |
-|---|---|
-| Implementation approval | Granted |
-| Code review | Ready for user review |
-| Commit approval | Awaiting separate explicit approval |
-| Local commit | Not created |
-| Push approval | Not requested |
-| Remote push | Not performed |
-| Pull-request approval | Not requested |
-| Pull request | Not created |
-| Merge approval | Not requested |
-| Merge | Not performed |
+**Implementation Approval:** Granted for Issues #11–#14.
 
-**Git Status:** Uncommitted on local branch `feature/issue-5-responsive-accessibility`.
+**Git Status:** Unstaged and uncommitted on `feature/issues-11-14-content-design`. The previously recorded backlog numbers are included in the branch baseline.
 
-**Proposed Commit Message:** `fix: prevent overflow with enlarged portfolio text (#5)`
+**Proposed Commit Message:** `feat: refine portfolio content and accessibility (#11, #13, #14)`
 
-**Important:** Approval to implement an Issue does not grant approval to commit, push, open a pull request, or merge. Each action requires separate explicit approval.
+**Approval Required:** Separate approval to stage and commit these three files. Push, pull request, and merge require their own approvals.
 
 ---
 
 ## Next Recommended Issue
 
-**GitHub Issue:** [#11 — Refine Professional Biography](https://github.com/adi-tomar/ai101-personal-website/issues/11)
-
-**Status:** Backlog
-
-**Priority:** Medium
-
-**Objective:** Replace the classroom biography with approved professional content.
-
-**Dependencies:** Issue #5 and approved professional sources
-
-**Next Action:** Confirm approved content and obtain implementation approval.
-
-Do not begin automatically.
+[**#15 — Verify Content and Privacy**](https://github.com/adi-tomar/ai101-personal-website/issues/15) follows review of the Sprint 2 work and resolution of the outstanding content and image decisions.
 
 ---
 
@@ -121,16 +78,16 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | #2 | Build responsive portfolio homepage | Closed on GitHub | High | None |
 | #3 | Add About and Experience sections | Merged via PR #8, issue open | High | #2 |
 | #4 | Add Projects and Contact sections | Merged via PR #9, issue open | High | #3 |
-| #5 | Test responsive design and accessibility | In Review | High | #2–#4 |
+| #5 | Test responsive design and accessibility | Merged via PR #10 | High | #2–#4 |
 
 ### Sprint 2 — Content and Design
 
 | Issue | Title | Status | Priority | Dependency |
 |---|---|---|---|---|
-| #11 | Refine Professional Biography | Backlog | Medium | Sprint 1 |
-| #12 | Add Approved Profile Image | Backlog | Medium | Sprint 1 |
-| #13 | Improve Project Cards | Backlog | Medium | Sprint 1 |
-| #14 | Improve Accessibility and Visual Design | Backlog | High | Sprint 1 |
+| #11 | Refine Professional Biography | Blocked | Medium | Sprint 1 |
+| #12 | Add Approved Profile Image | Blocked | Medium | Sprint 1 |
+| #13 | Improve Project Cards | In Review | Medium | Sprint 1 |
+| #14 | Improve Accessibility and Visual Design | In Review | High | Sprint 1 |
 
 ### Sprint 3 — Deployment
 
@@ -244,6 +201,7 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | `feature/issue-3-about-experience` | Development branch for Issue #3 |
 | `feature/issue-4-projects-contact` | Development branch for Issue #4 |
 | `feature/issue-5-responsive-accessibility` | Development branch for Issue #5 |
+| `feature/issues-11-14-content-design` | Development branch for Issues #11–#14 |
 | `demo-integration` | Optional branch for demonstrating pull requests |
 
 **Branch Rules:**
