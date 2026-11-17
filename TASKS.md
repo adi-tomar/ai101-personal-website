@@ -26,47 +26,46 @@
 
 ## Current Issue
 
-**GitHub Issue:** [#4 — Add Projects and Contact sections](https://github.com/adi-tomar/ai101-personal-website/issues/4)
+**GitHub Issue:** [#5 — Test responsive design and accessibility](https://github.com/adi-tomar/ai101-personal-website/issues/5)
 
 **Status:** In Review
 
 **Priority:** High
 
-**Objective:** Add projects and contact information to the classroom portfolio.
+**Objective:** Verify responsive behavior and accessibility across the complete portfolio.
 
 ### Acceptance Criteria
 
-GitHub Issue #4 has an empty description. The criteria below follow the approved plan.
+GitHub Issue #5 has an empty description. These checks follow `ROADMAP.md` and `BRAND.md`.
 
-- [x] Three responsive project cards describe the portfolio and two labeled demonstration concepts using the classroom resume.
-- [x] The Projects navigation link and View Projects button reach the Projects section.
-- [x] The Contact section includes a short invitation and clearly identifies the LinkedIn homepage destination.
-- [x] The sections follow `BRAND.md` and reference files are outside the `docs/` site root.
+- [x] The homepage fits mobile, tablet, and desktop widths and supports enlarged text.
+- [x] The skip link and section navigation work by keyboard and links show visible focus.
+- [x] Automated checks cover contrast, heading structure, landmarks, and other applicable accessibility rules.
+- [x] The stylesheet loads without browser errors and reference files are outside the served site.
 
 ### Implementation Checklist
 
-- [x] Confirm Issue #3 was merged and retrieve Issue #4.
-- [x] Review project guidelines and approved classroom content.
-- [x] Present the plan and obtain implementation approval.
-- [x] Add projects, navigation, and contact content.
-- [x] Verify acceptance criteria, review the diff, and record results.
+- [x] Confirm the merged baseline and retrieve Issue #5.
+- [x] Test responsive behavior, keyboard navigation, and automated accessibility rules.
+- [x] Fix the overflow found with enlarged text and rerun the checks.
+- [x] Review the diff, record results and limitations, and propose a commit message.
 - [ ] Obtain separate approval to stage and commit.
 
 ## Current Progress
 
 **Last Updated:** November 17, 2026
 
-**Work Completed:** Added three project cards, a Projects link in navigation, a View Projects button in the hero, and a LinkedIn link and invitation in Contact.
+**Work Completed:** Fixed horizontal overflow at 320px with text enlarged to 200% by allowing long text to wrap. Verified both card grids and the full navigation.
 
 **Work Remaining:** User review and separate approval to stage and commit.
 
-**Blockers:** None for the approved classroom scope. An actual LinkedIn profile URL remains pending approval.
+**Blockers:** None for the local tests. A direct request to the LinkedIn homepage returned HTTP 403, so only the link destination in the markup was verified. An approved public profile URL is still pending.
 
-**Files Changed:** `docs/index.html`, `docs/styles.css`, and `TASKS.md`.
+**Files Changed:** `docs/styles.css` and `TASKS.md`.
 
-**Tests Performed:** Chrome at 320, 390, 768, and 1440px. Checked navigation, keyboard focus, project labels, card layout, horizontal overflow, stylesheet loading, console errors, and reference-file isolation.
+**Tests Performed:** Chrome at 320, 390, 768, 1024, and 1440px with default text size, plus 320 and 640px at 200% root text size. Checked overflow, keyboard tab order, focus, skip navigation, section anchors, browser errors, and reference-file isolation. Ran axe-core with WCAG 2.x A/AA and best-practice rules, plus the previous project and experience card regression checks.
 
-**Test Results:** All local checks passed. Projects displayed in one, two, and three columns across the tested widths. Both reference URLs returned HTTP 404. The LinkedIn homepage destination was verified in the markup.
+**Test Results:** All local checks passed after the overflow fix. Axe-core reported zero violations in all seven configurations. Both reference URLs returned HTTP 404 from `docs/`. Screen-reader behavior and browsers other than Chrome were not tested.
 
 ## Git and Approval Status
 
@@ -83,9 +82,9 @@ GitHub Issue #4 has an empty description. The criteria below follow the approved
 | Merge approval | Not requested |
 | Merge | Not performed |
 
-**Git Status:** Uncommitted on local branch `feature/issue-4-projects-contact`.
+**Git Status:** Uncommitted on local branch `feature/issue-5-responsive-accessibility`.
 
-**Proposed Commit Message:** `feat: add projects and contact sections (#4)`
+**Proposed Commit Message:** `fix: prevent overflow with enlarged portfolio text (#5)`
 
 **Important:** Approval to implement an Issue does not grant approval to commit, push, open a pull request, or merge. Each action requires separate explicit approval.
 
@@ -93,17 +92,17 @@ GitHub Issue #4 has an empty description. The criteria below follow the approved
 
 ## Next Recommended Issue
 
-**GitHub Issue:** [#5 — Test responsive design and accessibility](https://github.com/adi-tomar/ai101-personal-website/issues/5)
+**GitHub Issue:** TBD — Refine Professional Biography
 
 **Status:** Backlog
 
-**Priority:** High
+**Priority:** Medium
 
-**Objective:** Verify responsive behavior and accessibility across the complete portfolio.
+**Objective:** Replace the classroom biography with approved professional content.
 
-**Dependencies:** Issues #2–#4
+**Dependencies:** Issue #5 and approved professional sources
 
-**Next Action:** Recommend after Issue #4 is reviewed and approved.
+**Next Action:** Confirm the GitHub issue and content before implementation.
 
 Do not begin automatically.
 
@@ -121,8 +120,8 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 |---|---|---|---|---|
 | #2 | Build responsive portfolio homepage | Closed on GitHub | High | None |
 | #3 | Add About and Experience sections | Merged via PR #8, issue open | High | #2 |
-| #4 | Add Projects and Contact sections | In Review | High | #3 |
-| #5 | Test responsive design and accessibility | Backlog | High | #2–#4 |
+| #4 | Add Projects and Contact sections | Merged via PR #9, issue open | High | #3 |
+| #5 | Test responsive design and accessibility | In Review | High | #2–#4 |
 
 ### Sprint 2 — Content and Design
 
@@ -244,6 +243,7 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | `feature/issue-2-homepage` | Development branch for Issue #2 |
 | `feature/issue-3-about-experience` | Development branch for Issue #3 |
 | `feature/issue-4-projects-contact` | Development branch for Issue #4 |
+| `feature/issue-5-responsive-accessibility` | Development branch for Issue #5 |
 | `demo-integration` | Optional branch for demonstrating pull requests |
 
 **Branch Rules:**
