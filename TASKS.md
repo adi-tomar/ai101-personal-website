@@ -26,47 +26,47 @@
 
 ## Current Issue
 
-**GitHub Issue:** [#3 — Add About and Experience sections](https://github.com/adi-tomar/ai101-personal-website/issues/3)
+**GitHub Issue:** [#4 — Add Projects and Contact sections](https://github.com/adi-tomar/ai101-personal-website/issues/4)
 
 **Status:** In Review
 
 **Priority:** High
 
-**Objective:** Add a biography and career history to the existing classroom portfolio.
+**Objective:** Add projects and contact information to the classroom portfolio.
 
 ### Acceptance Criteria
 
-GitHub Issue #3 has an empty description. The criteria below follow the approved plan.
+GitHub Issue #4 has an empty description. The criteria below follow the approved plan.
 
-- [x] The About section summarizes professional focus and experience supported by the classroom resume.
-- [x] Two clearly labeled fictional experience entries show the verified sample employers, roles, dates, and responsibilities.
-- [x] About and Experience navigation links work by keyboard and pointer within the existing responsive layout.
+- [x] Three responsive project cards describe the portfolio and two labeled demonstration concepts using the classroom resume.
+- [x] The Projects navigation link and View Projects button reach the Projects section.
+- [x] The Contact section includes a short invitation and clearly identifies the LinkedIn homepage destination.
 - [x] The sections follow `BRAND.md` and reference files are outside the `docs/` site root.
 
 ### Implementation Checklist
 
-- [x] Confirm the merged homepage and retrieve Issue #3.
-- [x] Review the project guidelines and approved classroom content.
+- [x] Confirm Issue #3 was merged and retrieve Issue #4.
+- [x] Review project guidelines and approved classroom content.
 - [x] Present the plan and obtain implementation approval.
-- [x] Build the sections and update navigation and styles.
-- [x] Test the acceptance criteria, review the diff, and record results.
+- [x] Add projects, navigation, and contact content.
+- [x] Verify acceptance criteria, review the diff, and record results.
 - [ ] Obtain separate approval to stage and commit.
 
 ## Current Progress
 
 **Last Updated:** November 17, 2026
 
-**Work Completed:** Added a short biography and two reverse-chronological experience cards. Linked both sections from the header.
+**Work Completed:** Added three project cards, a Projects link in navigation, a View Projects button in the hero, and a LinkedIn link and invitation in Contact.
 
 **Work Remaining:** User review and separate approval to stage and commit.
 
-**Blockers:** None for Issue #3. A real professional biography and a public LinkedIn profile URL remain pending approved sources.
+**Blockers:** None for the approved classroom scope. An actual LinkedIn profile URL remains pending approval.
 
 **Files Changed:** `docs/index.html`, `docs/styles.css`, and `TASKS.md`.
 
-**Tests Performed:** Chrome at 320, 390, 768, and 1440px. Checked section anchors, visible keyboard focus, skip-link behavior, role details against the sample resume, card layout, horizontal overflow, stylesheet loading, and console errors.
+**Tests Performed:** Chrome at 320, 390, 768, and 1440px. Checked navigation, keyboard focus, project labels, card layout, horizontal overflow, stylesheet loading, console errors, and reference-file isolation.
 
-**Test Results:** All local checks passed. The cards stacked at 320 and 390px and sat side by side at 768 and 1440px. Both reference URLs returned HTTP 404. The existing LinkedIn destination was checked in the markup.
+**Test Results:** All local checks passed. Projects displayed in one, two, and three columns across the tested widths. Both reference URLs returned HTTP 404. The LinkedIn homepage destination was verified in the markup.
 
 ## Git and Approval Status
 
@@ -83,9 +83,9 @@ GitHub Issue #3 has an empty description. The criteria below follow the approved
 | Merge approval | Not requested |
 | Merge | Not performed |
 
-**Git Status:** Uncommitted on local branch `feature/issue-3-about-experience`.
+**Git Status:** Uncommitted on local branch `feature/issue-4-projects-contact`.
 
-**Proposed Commit Message:** `feat: add about and experience sections (#3)`
+**Proposed Commit Message:** `feat: add projects and contact sections (#4)`
 
 **Important:** Approval to implement an Issue does not grant approval to commit, push, open a pull request, or merge. Each action requires separate explicit approval.
 
@@ -93,17 +93,17 @@ GitHub Issue #3 has an empty description. The criteria below follow the approved
 
 ## Next Recommended Issue
 
-**GitHub Issue:** [#4 — Add Projects and Contact sections](https://github.com/adi-tomar/ai101-personal-website/issues/4)
+**GitHub Issue:** [#5 — Test responsive design and accessibility](https://github.com/adi-tomar/ai101-personal-website/issues/5)
 
 **Status:** Backlog
 
 **Priority:** High
 
-**Objective:** Add project cards and contact information using approved content.
+**Objective:** Verify responsive behavior and accessibility across the complete portfolio.
 
-**Dependencies:** Issue #3
+**Dependencies:** Issues #2–#4
 
-**Next Action:** Recommend after Issue #3 is reviewed and approved.
+**Next Action:** Recommend after Issue #4 is reviewed and approved.
 
 Do not begin automatically.
 
@@ -120,8 +120,8 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | Issue | Title | Status | Priority | Dependency |
 |---|---|---|---|---|
 | #2 | Build responsive portfolio homepage | Closed on GitHub | High | None |
-| #3 | Add About and Experience sections | In Review | High | #2 |
-| #4 | Add Projects and Contact sections | Backlog | High | #3 |
+| #3 | Add About and Experience sections | Merged via PR #8, issue open | High | #2 |
+| #4 | Add Projects and Contact sections | In Review | High | #3 |
 | #5 | Test responsive design and accessibility | Backlog | High | #2–#4 |
 
 ### Sprint 2 — Content and Design
@@ -243,6 +243,7 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 | `starter` | Clean starting point for classroom exercises |
 | `feature/issue-2-homepage` | Development branch for Issue #2 |
 | `feature/issue-3-about-experience` | Development branch for Issue #3 |
+| `feature/issue-4-projects-contact` | Development branch for Issue #4 |
 | `demo-integration` | Optional branch for demonstrating pull requests |
 
 **Branch Rules:**

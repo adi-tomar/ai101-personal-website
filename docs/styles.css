@@ -120,9 +120,16 @@ h1 {
   font-size: 1.125rem;
 }
 
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
 .button {
   display: inline-block;
   padding: 0.65rem 1rem;
+  border: 1px solid var(--blue);
   border-radius: 0.5rem;
   background: var(--blue);
   color: var(--paper);
@@ -131,7 +138,20 @@ h1 {
 }
 
 .button:hover {
+  border-color: var(--navy);
   background: var(--navy);
+  color: var(--paper);
+}
+
+.button-secondary {
+  background: var(--paper);
+  color: var(--blue);
+}
+
+.button-secondary:hover {
+  border-color: var(--blue);
+  background: var(--alternate);
+  color: var(--blue);
 }
 
 .profile-section {
@@ -154,13 +174,13 @@ h1 {
   color: var(--muted);
 }
 
-.experience-grid {
+.card-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr));
   gap: 1rem;
 }
 
-.experience-card {
+.card {
   padding: clamp(1rem, 3vw, 1.75rem);
   border: 1px solid var(--border);
   border-radius: 0.75rem;
@@ -180,9 +200,29 @@ h1 {
   margin-top: 0.5rem;
 }
 
+#projects {
+  background: var(--alternate);
+}
+
+.projects-grid {
+  margin-top: 1.5rem;
+}
+
+.project-card {
+  background: var(--paper);
+}
+
+.project-card p {
+  margin: 0.75rem 0 0;
+}
+
+.project-type {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
+
 .site-footer {
   border-top: 1px solid var(--border);
-  background: var(--alternate);
 }
 
 .footer-content {
