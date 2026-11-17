@@ -25,7 +25,8 @@ a {
   color: var(--blue);
 }
 
-a:focus-visible {
+a:focus-visible,
+[tabindex="-1"]:focus-visible {
   outline: 2px solid var(--navy);
   outline-offset: 4px;
 }
@@ -37,6 +38,7 @@ a:focus-visible {
 
 .skip-link {
   position: absolute;
+  z-index: 1;
   top: 0.75rem;
   left: 1rem;
   padding: 0.5rem 0.75rem;
@@ -105,6 +107,10 @@ h3 {
 h1 {
   font-size: clamp(2.75rem, 8vw, 5.5rem);
   letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
 }
 
 .headline {
@@ -210,16 +216,27 @@ h1 {
 }
 
 .project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   background: var(--paper);
 }
 
 .project-card p {
-  margin: 0.75rem 0 0;
+  margin: 0.75rem 0;
 }
 
-.project-type {
+.project-card .project-type {
+  margin-block: 0 0.5rem;
   color: var(--muted);
   font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.project-link {
+  margin-top: auto;
+  padding-block: 0.25rem;
+  text-underline-offset: 0.2em;
 }
 
 .site-footer {
