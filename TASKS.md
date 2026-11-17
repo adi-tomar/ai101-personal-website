@@ -92,7 +92,7 @@ GitHub Issue #5 has an empty description. These checks follow `ROADMAP.md` and `
 
 ## Next Recommended Issue
 
-**GitHub Issue:** TBD — Refine Professional Biography
+**GitHub Issue:** [#11 — Refine Professional Biography](https://github.com/adi-tomar/ai101-personal-website/issues/11)
 
 **Status:** Backlog
 
@@ -102,7 +102,7 @@ GitHub Issue #5 has an empty description. These checks follow `ROADMAP.md` and `
 
 **Dependencies:** Issue #5 and approved professional sources
 
-**Next Action:** Confirm the GitHub issue and content before implementation.
+**Next Action:** Confirm approved content and obtain implementation approval.
 
 Do not begin automatically.
 
@@ -127,18 +127,18 @@ GitHub Issues are the authoritative source for development tasks, requirements, 
 
 | Issue | Title | Status | Priority | Dependency |
 |---|---|---|---|---|
-| TBD | Refine Professional Biography | Backlog | Medium | Sprint 1 |
-| TBD | Add Approved Profile Image | Backlog | Medium | Sprint 1 |
-| TBD | Improve Project Cards | Backlog | Medium | Sprint 1 |
-| TBD | Improve Accessibility and Visual Design | Backlog | High | Sprint 1 |
+| #11 | Refine Professional Biography | Backlog | Medium | Sprint 1 |
+| #12 | Add Approved Profile Image | Backlog | Medium | Sprint 1 |
+| #13 | Improve Project Cards | Backlog | Medium | Sprint 1 |
+| #14 | Improve Accessibility and Visual Design | Backlog | High | Sprint 1 |
 
 ### Sprint 3 — Deployment
 
 | Issue | Title | Status | Priority | Dependency |
 |---|---|---|---|---|
-| TBD | Verify Content and Privacy | Backlog | High | Sprint 2 |
-| TBD | Configure GitHub Pages | Backlog | High | Sprint 2 |
-| TBD | Deploy and Test Published Website | Backlog | High | GitHub Pages setup |
+| #15 | Verify Content and Privacy | Backlog | High | Sprint 2 |
+| #16 | Configure GitHub Pages | Backlog | High | Sprint 2 |
+| #17 | Deploy and Test Published Website | Backlog | High | GitHub Pages setup |
 
 **Note:** Issue numbers are planning references until confirmed in GitHub. Replace them with actual Issue numbers after creation.
 
